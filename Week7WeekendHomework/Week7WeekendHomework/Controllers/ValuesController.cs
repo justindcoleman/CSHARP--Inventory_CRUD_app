@@ -10,7 +10,7 @@ namespace Week7WeekendHomework.Controllers
 {
     public class ValuesController : ApiController
     {
-        ProductRepository repository = new ProductRepository();
+        static readonly ProductRepository repository = new ProductRepository();
 
         // GET api/values
         public IEnumerable<Product> Get()
@@ -42,7 +42,7 @@ namespace Week7WeekendHomework.Controllers
         // PUT api/values/5
         public void PutProduct(int id, Product item)
         {
-            item.Id = 5;
+            item.Id = id;
             if (!repository.Update(item))
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);

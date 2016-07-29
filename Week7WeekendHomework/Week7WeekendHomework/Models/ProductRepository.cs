@@ -11,10 +11,10 @@ namespace Week7WeekendHomework.Models
         private int _nextId = 1;
         public ProductRepository()
         {
-            new Product { Id = 1, Name = "Tomato", Category = "Groceries", Price = 1.5M, inStock = true };
-            new Product { Id = 2, Name = "Yo-yo", Category = "Toys", Price = 3.75M, inStock = true };
-            new Product { Id = 3, Name = "Hammer", Category = "Hardware", Price = 16.99M, inStock = false };
-            new Product { Id = 4, Name = "Dishwaster", Category = "Utilities", Price = 599.99M, inStock = false };
+            Add(new Product { Id = 1, Name = "Tomato", Category = "Groceries", Price = 1.5M, inStock = true });
+            Add(new Product { Id = 2, Name = "Yo-yo", Category = "Toys", Price = 3.75M, inStock = true });
+            Add(new Product { Id = 3, Name = "Hammer", Category = "Hardware", Price = 16.99M, inStock = false });
+            Add(new Product { Id = 4, Name = "Dishwaster", Category = "Utilities", Price = 599.99M, inStock = false });
         }
 
         public Product Add(Product item)
